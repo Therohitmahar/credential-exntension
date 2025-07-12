@@ -8,7 +8,7 @@ This extension provides two main functionalities:
 1.  **A Popup UI:** A comprehensive dashboard to view, search, and manage all credentials.
 2.  **Content Script Injection:** An intelligent autofill suggestion box that appears on specified login pages, allowing for one-click login.
 
-![Extension Popup Screenshot](images/popupview.png)
+<img src="images/popupview.png" alt="Extension Popup Screenshot" width="550"/>
 
 ![Suggestion Box Screenshot](images/suggestions.png)
 ## Features
