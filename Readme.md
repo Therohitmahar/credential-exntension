@@ -8,6 +8,9 @@ This extension provides two main functionalities:
 1.  **A Popup UI:** A comprehensive dashboard to view, search, and manage all credentials.
 2.  **Content Script Injection:** An intelligent autofill suggestion box that appears on specified login pages, allowing for one-click login.
 
+![Extension Popup Screenshot](images/popupview.png)
+
+![Suggestion Box Screenshot](images/suggestions.png)
 ## Features
 
 - **Centralized Credential Management:** Fetches all credentials from a single backend source (`https://email-storage-be.onrender.com`).
