@@ -18,6 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
   setupDynamicEventListeners();
 });
 
+// add-credential-button
+document.getElementById("add-credential-button").addEventListener("click", () => {
+  window.open("https://t4xgn5.csb.app/", "_blank");
+})
 const fetchAndDisplayEdTechs = async () => {
   try {
     const response = await fetch(`${BASE_URL}/edtech/all`);

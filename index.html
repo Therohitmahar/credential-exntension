@@ -73,9 +73,12 @@
       <header class="mb-8">
         <div class="flex flex-wrap items-center justify-between gap-4">
           <div class="flex-1 min-w-[200px]">
-            <h1 class="text-3xl font-bold text-[var(--text-light)]">
-              Credential Storage
-            </h1>
+            <div class="flex gap-1 items-center">
+              <img alt="Logo" class="h-10 w-10s" src="images/icon128.png" />
+              <h1 class="text-3xl font-bold text-[var(--text-light)]">
+                Credential Storage
+              </h1>
+            </div>
             <p class="text-[var(--text-secondary-light)] mt-1">
               Centralized and secure credential management.
             </p>
@@ -95,7 +98,9 @@
                 type="text"
               />
             </div>
+            <!-- open google -->
             <button
+              id="add-credential-button"
               class="has-tooltip relative p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:ring-offset-[var(--background-light)] transition-colors"
             >
               <span
