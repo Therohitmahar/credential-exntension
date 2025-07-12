@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Credential Extension",
+  "version": "1.0.0",
+  "description": "A basic browser extension for credential management.",
+  "permissions": [],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {}
+  }
+}
