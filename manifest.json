@@ -1,11 +1,37 @@
 {
   "manifest_version": 3,
-  "name": "Credential Extension",
-  "version": "1.0.0",
-  "description": "A basic browser extension for credential management.",
-  "permissions": [],
+  "name": "Credential Storage",
+  "version": "1.0",
+  "description": "A centralized and secure way to manage your credentials.",
+
+  "permissions": ["storage", "activeTab"],
+
+  "host_permissions": ["https://email-storage-be.onrender.com/"],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
   "action": {
-    "default_popup": "index.html",
-    "default_icon": {}
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon16.png",
+      "128": "images/icon16.png"
+    },
+    "default_title": "Credential Storage",
+    "default_popup": "index.html"
+  },
+
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon16.png",
+    "128": "images/icon16.png"
   }
 }

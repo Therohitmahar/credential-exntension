@@ -1,0 +1,116 @@
+/* content.css */
+
+#cred-suggestion-box {
+  position: absolute;
+  z-index: 99999;
+
+  /* --- Dark Theme --- */
+  background-color: #1f2937; /* Dark gray background */
+  border: 1px solid #374151; /* Slightly lighter border */
+  color: #f3f4f6; /* Light text color for contrast */
+
+  border-radius: 8px; /* Slightly more rounded corners */
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.2); /* Deeper shadow */
+  max-height: 220px;
+  overflow-y: auto;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+}
+/* add scrollbar   */
+#cred-suggestion-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+#cred-suggestion-box::-webkit-scrollbar-thumb {
+  background-color: #374151;
+  border-radius: 4px;
+}
+
+#cred-suggestion-box::-webkit-scrollbar-track {
+  background-color: #1f2937;
+}
+
+/* --- NEW: Arrow --- */
+
+#cred-suggestion-box::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* Above the box */
+  right: 20px; /* Adjust as needed for horizontal position */
+
+  width: 0;
+  height: 0;
+
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #374151; /* Outer triangle color (border) */
+}
+
+#cred-suggestion-box::after {
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: 21px;
+
+  width: 0;
+  height: 0;
+
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #1f2937; /* Inner triangle fill */
+}
+
+#cred-suggestion-box.active {
+  opacity: 1;
+}
+
+.suggestion-item {
+  padding: 10px 14px; /* A little more padding */
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.1s ease-in-out;
+
+  /* --- NEW: Division between cards --- */
+  border-bottom: 1px solid #374151;
+}
+
+/* Remove the bottom border from the very last item */
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover {
+  background-color: #374151; /* Lighter gray for hover */
+}
+
+.suggestion-email {
+  font-size: 12px; /* Back to a slightly larger, clearer size */
+  font-weight: 500;
+  color: #f3f4f6; /* Light text */
+  transition: font-size 0.15s ease-in-out;
+}
+
+.suggestion-name {
+  font-size: 11px; /* Slightly larger secondary text */
+  color: #9ca3af; /* Gray secondary text */
+  transition: font-size 0.15s ease-in-out;
+  margin-top: 2px; /* Add a little space */
+}
+.suggestion-environment {
+  font-size: 10px; /* Slightly larger secondary text */
+  transition: font-size 0.15s ease-in-out;
+  margin-top: 2px; /* Add a little space */
+}
+.suggestion-environment.production {
+  color: #ef4444; /* Red for production */
+}
+.suggestion-environment.test {
+  color: #3b82f6; /* Blue for staging */
+}
+/* 
+  We'll remove the font-size change on active now,
+  as the new design is clearer and doesn't need it as much.
+  You can add it back if you like!
+*/
