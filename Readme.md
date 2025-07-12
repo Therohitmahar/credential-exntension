@@ -1,4 +1,5 @@
 # Credential Storage - Chrome Extension
+![Extension Popup Screenshot](images/icon128.png)
 
 A browser extension to securely fetch, manage, and autofill credentials directly from a centralized backend, enhancing productivity and centralizing access management for development teams.
 
@@ -6,12 +7,6 @@ This extension provides two main functionalities:
 
 1.  **A Popup UI:** A comprehensive dashboard to view, search, and manage all credentials.
 2.  **Content Script Injection:** An intelligent autofill suggestion box that appears on specified login pages, allowing for one-click login.
-
-![Extension Popup Screenshot](images/screenshot-popup.png)
-_Note: You should replace this with an actual screenshot of your popup._
-
-![Suggestion Box Screenshot](images/screenshot-suggestions.png)
-_Note: You should replace this with an actual screenshot of the suggestion box._
 
 ## Features
 
@@ -49,7 +44,7 @@ Follow these instructions to get the extension up and running on your local mach
 1.  **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/your-username/your-repo-name.git
+    git clone https://github.com/Therohitmahar/credential-exntension.git
     ```
 
     (Or, if you received a `.zip` file, unzip it to a permanent location.)
